@@ -6,7 +6,7 @@ Java Language Feature Extension
   
 Meta-programming For Common Implementation
 ---------------------------------------
-# Motivation
+### Motivation
 This feature comes into being when I notice that we need to augment a class to some interface sometimes. <br/>
 The mostly talked scenario is stub-generating. When we want to call method in another process or host, we would like 
 to generate a stub that call the middleware, then the middleware puts the callback message onto network, reach
@@ -59,7 +59,7 @@ So the meta-programming mechanism is designed to fit the following cases:
 > 2. Callback mechanism stays the same.
 > 3. Code generating seldom varies.
 
-# RuntimeClass
+### RuntimeClass
 The <a href="https://github.com/aegistudio/JavaExtension/blob/master/src/net/aegistudio/meta/RuntimeClass.java">
 net.aegistudio.meta.RuntimeClass</a> provides common method for generating codes on-the-fly. The class itself 
 is abstract, and its subclasses tell it how to handle code generating work. The RuntimeClass is the cornerstone 
@@ -129,7 +129,7 @@ And the output should be:
 In the sample code, we generate the runtime class with its class body printing class name,
 method name and parameter list, returning 0 or null if necessary.
 
-#StretchingClass
+### StretchingClass
 It's inconvenient if we generate the code body by writing bundles of .append and \", and 
 <a href="https://github.com/aegistudio/JavaExtension/blob/master/src/net/aegistudio/meta/StretchingClass.java">
 net.aegistudio.meta.StretchingClass</a> provides another solution. Stretching class can also extends to 
